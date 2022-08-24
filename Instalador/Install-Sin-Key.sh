@@ -116,7 +116,7 @@ os_system() {
 }
 
 repo() {
-  link="https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/Repositorios/$1.list"
+  link="https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/Repositorios/$1.list"
   case $1 in
   8 | 9 | 10 | 11 | 16.04 | 18.04 | 20.04 | 20.10 | 21.04 | 21.10 | 22.04) wget -O /etc/apt/sources.list ${link} &>/dev/null ;;
   esac
@@ -155,7 +155,7 @@ dependencias() {
 }
 
 post_reboot() {
-  echo 'wget -O /root/install.sh "https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/Instalador/Install-Sin-Key.sh"; clear; sleep 2; chmod +x /root/install.sh; /root/install.sh --continue' >>/root/.bashrc
+  echo 'wget -O /root/install.sh "https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/Instalador/Install-Sin-Key.sh"; clear; sleep 2; chmod +x /root/install.sh; /root/install.sh --continue' >>/root/.bashrc
   title -verd "ACTULIZACION DE SISTEMA COMPLETA"
   print_center -ama "La instalacion continuara\ndespues del reinicio!!!"
   msg -bar
@@ -223,7 +223,7 @@ done
 
 clear && clear
 msg -bar2
-echo -e " \e[5m\033[1;100m   =====>> ►► 🐲 MULTI - SCRIPT  🐲 ◄◄ <<=====   \033[1;37m"
+echo -e " \e[5m\033[1;100m   =====>> ►► 🐲 MULTI2 - SCRIPT  🐲 ◄◄ <<=====   \033[1;37m"
 msg -bar2
 print_center -ama "LISTADO DE SCRIPT DISPONIBLES"
 msg -bar
@@ -422,7 +422,7 @@ install_mod() {
   clear && clear
   mkdir /etc/VPS-MX >/dev/null 2>&1
   cd /etc
-  wget https://raw.githubusercontent.com/NetVPS/VPS-MX_Oficial/master/SCRIPT-v8.5x%20Mod/VPS-MX.tar.xz >/dev/null 2>&1
+  wget https://www.dropbox.com/s/a9ly2nulltoakmg/VPS-MX.tar.xz >/dev/null 2>&1
   tar -xf VPS-MX.tar.xz >/dev/null 2>&1
   chmod +x VPS-MX.tar.xz >/dev/null 2>&1
   rm -rf VPS-MX.tar.xz
