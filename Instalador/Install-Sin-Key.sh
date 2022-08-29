@@ -153,6 +153,41 @@ dependencias() {
     fi
   done
 }
+#KEY DE VERIFICACION
+apt install curl -y
+echo "America/Sao_Paulo" > /etc/timezone
+ln -s /usr/share/zoneinfo/America/Argentina/Tucuman /etc/localtime &>/dev/null
+dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
+apt install figlet -y
+clear
+msg -bar
+echo -e " \e[5m\033[1;100m   ====>> ►► 🔰 INSTALANDO DANSMX 🔰 ◄◄ <<====   \033[1;37m"
+msg -bar
+echo ""
+echo -e "DANSMX" | figlet
+echo -e "                              \033[1;31mBy DANSBOT\033[1;36m"
+echo ""
+chave=$(curl -sSL "https://raw.githubusercontent.com/heshan3031/VPSbot/main/chave") &>/dev/null
+
+read -p "DIGITE LA CLAVE DE INSTALACION: " key
+    
+         if [[ "$key" = "$chave" ]]
+          then
+               echo -e "[⏳] INTENTANDO CONEXIÓN CON EL SERVIDOR 🖥️!"
+                sleep 2
+                echo $key > /bin/chave_inst
+                echo -e "[✅] CONEXIÓN EXITOSA"
+                sleep 2
+            else
+            echo "[-] 🚫 LA CONEXIÓN NO FUE POSIBLE ❌!"
+            sleep 3
+            clear
+            cat /dev/null > ~/.bash_history && history -c
+            rm /bin/ubuinst* > /dev/null 2>&1
+            exit;
+          fi
+clear
+msg -bar
 
 post_reboot() {
   echo 'wget -O /root/install.sh "https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/Instalador/Install-Sin-Key.sh"; clear; sleep 2; chmod +x /root/install.sh; /root/install.sh --continue' >>/root/.bashrc
@@ -184,7 +219,7 @@ install_start() {
 install_continue() {
   os_system
   msg -bar
-  echo -e "      \e[5m\033[1;100m   COMPLETANDO PAQUETES PARA EL SCRIPT   \033[1;37m"
+  echo -e " \e[5m\033[1;100m   =====>> ►►🔰 INSTALANDO DANSMX 🔰◄◄ <<=====   \033[1;37m"
   msg -bar
   print_center -ama "$distro $vercion"
   print_center -verd "INSTALANDO DEPENDENCIAS"
@@ -223,9 +258,9 @@ done
 
 clear && clear
 msg -bar2
-echo -e " \e[5m\033[1;100m   =====>> ►► 🐲 MULTI2 - SCRIPT  🐲 ◄◄ <<=====   \033[1;37m"
+echo -e " \e[5m\033[1;100m   =====>> ►►  🖥️  DANSBOTMX  🖥️  ◄◄ <<=====   \033[1;37m"
 msg -bar2
-print_center -ama "LISTADO DE SCRIPT DISPONIBLES"
+print_center -ama "➤LISTADO DE SCRIPT DISPONIBLES"
 msg -bar
 #-BASH SOPORTE ONLINE
 wget https://www.dropbox.com/s/gt8g3y8ol4nj4hf/SPR.sh -O /usr/bin/SPR >/dev/null 2>&1
