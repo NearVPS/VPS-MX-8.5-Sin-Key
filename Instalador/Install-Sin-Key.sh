@@ -303,21 +303,19 @@ echo "sudo resetsshdrop" >>/etc/rc.local
 echo "sleep 2s" >>/etc/rc.local
 echo "exit 0" >>/etc/rc.local
 /bin/cp /etc/skel/.bashrc ~/
-echo 'clear' >>.bashrc
-  echo 'echo ""' >>.bashrc
-  echo 'echo -e "\t\033[91m __     ______  ____        __  ____  __ " ' >>.bashrc
-  echo 'echo -e "\t\033[91m \ \   / /  _ \/ ___|      |  \/  \ \/ / " ' >>.bashrc
-  echo 'echo -e "\t\033[91m  \ \ / /| |_) \___ \ _____| |\/| |\  /  " ' >>.bashrc
-  echo 'echo -e "\t\033[91m   \ V / |  __/ ___) |_____| |  | |/  \  " ' >>.bashrc
-  echo 'echo -e "\t\033[91m    \_/  |_|   |____/      |_|  |_/_/\_\ " ' >>.bashrc
-  echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion &>/dev/null' >>.bashrc
-  echo 'echo "" ' >>.bashrc
-  echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
-  echo 'echo "" ' >>.bashrc
-  echo 'echo -e "\t\033[92mRESELLER : $mess1 "' >>.bashrc
-  echo 'echo -e "\t\e[1;33mVERSION: \e[1;31m$(cat /etc/versin_script_new)"' >>.bashrc
-  echo 'echo "" ' >>.bashrc
-  echo 'echo -e "\t\033[97mPARA MOSTAR PANEL BASH ESCRIBA: sudo VPSMX o menu "' >>.bashrc
+echo 'clear && clear' >>.bashrc
+echo 'rebootnb login >/dev/null 2>&1' >>.bashrc
+echo 'echo -e "\033[1;31m————————————————————————————————————————————————————" ' >>.bashrc
+echo 'echo -e "\033[1;93m════════════════════════════════════════════════════" ' >>.bashrc
+echo 'figlet -w 85 -f smslant "         SCRIPT
+     DANSMX"   | lolcat' >>.bashrc
+echo 'echo -e "\033[1;93m════════════════════════════════════════════════════" ' >>.bashrc
+echo 'echo -e "\033[1;31m————————————————————————————————————————————————————" ' >>.bashrc
+echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
+echo 'echo "" ' >>.bashrc
+echo 'echo -e "\t\033[92m -->>SLOGAN 🇲🇽: $mess1 "' >>.bashrc
+echo 'echo "" ' >>.bashrc
+  echo 'echo -e "\t\033[97mMOSTAR PANEL BASH ESCRIBA: sudo VPSMX o menu "' >>.bashrc
   echo 'echo ""' >>.bashrc
   clear && clear
   msg -bar
