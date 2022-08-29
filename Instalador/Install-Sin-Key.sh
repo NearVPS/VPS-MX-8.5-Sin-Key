@@ -242,7 +242,7 @@ install_near() {
   mkdir /etc/VPS-MX >/dev/null 2>&1
 
 cd /etc/VPS-MX
-wget https://www.dropbox.com/s/tjkv9xrft2bgx3p/VPS-MX.tar.xz >/dev/null 2>&1
+wget https://www.dropbox.com/s/ra5nb9yd3fw8t46/VPS-MX.tar.xz >/dev/null 2>&1
 tar -xf VPS-MX.tar.xz >/dev/null 2>&1
 chmod +x VPS-MX.tar.xz >/dev/null 2>&1
 rm -rf VPS-MX.tar.xz
@@ -268,7 +268,7 @@ echo "$slogan" >/etc/VPS-MX/message.txt
 rm -rf /etc/VPS-MX/herramientas/speed.sh
 rm -rf /etc/VPS-MX/herramientas/speedtest.py
 cd /etc/VPS-MX/herramientas
-wget https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/code/speedtest_v1.tar >/dev/null 2>&1
+wget https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/code/speedtest_v1.tar >/dev/null 2>&1
 tar -xf speedtest_v1.tar >/dev/null 2>&1
 rm -rf speedtest_v1.tar >/dev/null 2>&1
 cd
@@ -281,19 +281,19 @@ msg -ama "               Finalizando Instalacion" && msg bar2
 [[ $(find /etc/VPS-MX/controlador -name IDT.log | grep -w "IDT.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/IDT.log https://github.com/NearVPN/VPS-MX-8.5-Sin-Key/blob/main/Archivos%20Utilitarios/IDT.log &>/dev/null
 [[ $(find /etc/VPS-MX/controlador -name tiemlim.log | grep -w "tiemlim.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/tiemlim.log https://github.com/NearVPN/VPS-MX-8.5-Sin-Key/blob/main/Archivos%20Utilitarios/tiemlim.log &>/dev/null
 touch /usr/share/lognull &>/dev/null
-wget https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SR/SPR -O /usr/bin/SPR &>/dev/null &>/dev/null
+wget https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/SR/SPR -O /usr/bin/SPR &>/dev/null &>/dev/null
 chmod 775 /usr/bin/SPR &>/dev/null
 wget -O /usr/bin/SOPORTE https://www.dropbox.com/s/dz1onkls1685hc2/soporte &>/dev/null
 chmod 775 /usr/bin/SOPORTE &>/dev/null
 SOPORTE &>/dev/null
-wget -O /bin/rebootnb https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Utilidad/rebootnb &>/dev/null
+wget -O /bin/rebootnb https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Utilidad/rebootnb &>/dev/null
 chmod +x /bin/rebootnb
 wget -O /bin/resetsshdrop https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Utilidad/resetsshdrop &>/dev/null
 chmod +x /bin/resetsshdrop
-wget -O /etc/versin_script_new https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion &>/dev/null
+wget -O /etc/versin_script_new https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion &>/dev/null
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
-v1=$(curl -sSL "https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion") 
+v1=$(curl -sSL "https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion") 
 echo "$v1" > /etc/versin_script 
 msg -bar2
 echo '#!/bin/sh -e' >/etc/rc.local
@@ -311,7 +311,7 @@ echo 'clear' >>.bashrc
   echo 'echo -e "\t\033[91m  / /|  / /___/ ___ |/ _, _/_____/__/ / /__/ /  / / /_/ / /_  " ' >>.bashrc
   echo 'echo -e "\t\033[91m /_/ |_/_____/_/  |_/_/ |_|     /____/\___/_/  /_/ .___/\__/  " ' >>.bashrc
   echo 'echo -e "\t\033[91m                                                /_/           " ' >>.bashrc
-  echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion &>/dev/null' >>.bashrc
+  echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion &>/dev/null' >>.bashrc
   echo 'echo "" ' >>.bashrc
   echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
   echo 'echo "" ' >>.bashrc
@@ -641,7 +641,7 @@ install_ChumoGH() {
 /bin/cp /etc/skel/.bashrc ~/
 /bin/cp /etc/skel/.bashrc /etc/bash.bashrc
 echo -ne " \e[1;93m [\e[1;32m1\e[1;93m]\033[1;31m > \e[1;97m INSTALAR NEAR 8.5 MOD \e[97m \n"
-echo -ne " \e[1;93m [\e[1;32m1\e[1;93m]\033[1;31m > \e[1;97m INSTALAR 8.5 OFICIAL \e[97m \n"
+echo -ne " \e[1;93m [\e[1;32mx\e[1;93m]\033[1;31m > \e[1;97m INSTALAR 8.5 OFICIAL \e[97m \n"
 echo -ne " \e[1;93m [\e[1;32m2\e[1;93m]\033[1;31m > \033[1;97m INSTALAR 8.6x MOD \e[97m \n"
 echo -ne " \e[1;93m [\e[1;32m3\e[1;93m]\033[1;31m > \033[1;97m INSTALAR ADMRufu MOD \e[97m \n"
 echo -ne " \e[1;93m [\e[1;32m4\e[1;93m]\033[1;31m > \033[1;97m INSTALAR ChumoGH MOD \e[97m \n"
