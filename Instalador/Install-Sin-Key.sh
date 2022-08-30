@@ -186,8 +186,8 @@ read -p "DIGITE LA CLAVE DE INSTALACION: " key
             rm /bin/ubuinst* > /dev/null 2>&1
             exit;
           fi
-clear
-msg -bar
+clear && clear
+
 
 post_reboot() {
   echo 'wget -O /root/install.sh "https://raw.githubusercontent.com/NearVPS/VPS-MX-8.5-Sin-Key/main/Instalador/Install-Sin-Key.sh"; clear; sleep 2; chmod +x /root/install.sh; /root/install.sh --continue' >>/root/.bashrc
