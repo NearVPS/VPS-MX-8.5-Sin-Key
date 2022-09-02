@@ -172,7 +172,6 @@ clear && clear
   echo -e "$slogan"
   msg -bar
   clear && clear
-install_paketes
 mkdir /etc/VPS-MX >/dev/null 2>&1
 
 cd /etc/VPS-MX
@@ -185,6 +184,7 @@ chmod -R 755 /etc/VPS-MX
 rm -rf /etc/VPS-MX/MEUIPvps
 echo "/etc/VPS-MX/menu" >/usr/bin/menu && chmod +x /usr/bin/menu
 echo "/etc/VPS-MX/menu" >/usr/bin/VPSMX && chmod +x /usr/bin/VPSMX
+echo "$slogan" >/etc/VPS-MX/message.txt
 [[ ! -d /usr/local/lib ]] && mkdir /usr/local/lib
 [[ ! -d /usr/local/lib/ubuntn ]] && mkdir /usr/local/lib/ubuntn
 [[ ! -d /usr/local/lib/ubuntn/apache ]] && mkdir /usr/local/lib/ubuntn/apache
